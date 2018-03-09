@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppProyecto.Views.ListEventsPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="EventsListView"
+                ItemsSource="{Binding Items}"
+                CachingStrategy="RecycleElement"
+                RowHeight="60"
+                ItemSelected="OnItemSelected">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="8">
+
+                                <Label Text="{Binding title}"
+                                            FontAttributes="Bold" />
+                                <Label Text="{Binding description}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+
