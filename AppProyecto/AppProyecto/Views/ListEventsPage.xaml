@@ -12,18 +12,27 @@
             <ListView x:Name="EventsListView"
                 ItemsSource="{Binding Items}"
                 CachingStrategy="RecycleElement"
-                RowHeight="60"
+                RowHeight="320"
                 ItemSelected="OnItemSelected">
 
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Margin="8">
+                            <!--<StackLayout Margin="8">-->
+                            <StackLayout VerticalOptions ="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" Padding="10">
+                                <Image Aspect="AspectFill"
+                                 HeightRequest ="240"
+                                 Source="https://luciomsp.files.wordpress.com/2015/03/monkey.png" />
 
                                 <Label Text="{Binding title}"
-                                            FontAttributes="Bold" />
-                                <Label Text="{Binding description}" />
+                                       FontAttributes="Bold" 
+                                       FontSize="Large"/>
+                                
+                                <Label Text="{Binding description}"
+                                       FontSize="Medium"/>
+
                             </StackLayout>
+                            
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

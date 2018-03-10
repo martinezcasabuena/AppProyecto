@@ -4,11 +4,53 @@
              x:Class="AppProyecto.Views.EventPlanDetailPage"
              Title="{Binding Title}">
     <ContentPage.Content>
-        <StackLayout Spacing="20" Padding="15">
+        <!--<StackLayout Spacing="20" Padding="15">
             <Label Text="Text:" FontSize="Medium" />
             <Label Text="{Binding EventPlan.title}" FontSize="Small"/>
             <Label Text="Description:" FontSize="Medium" />
             <Label Text="{Binding EventPlan.description}" FontSize="Small"/>
-        </StackLayout>
+        </StackLayout>-->
+        <!--<Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Text="Top Left" Grid.Row="0" Grid.Column="0" />
+            <Label Text="Top Right" Grid.Row="0" Grid.Column="1" />
+            <Label Text="Bottom Left" Grid.Row="1" Grid.Column="0" />
+            <Label Text="Bottom Right" Grid.Row="1" Grid.Column="1" />
+            
+        </Grid>-->
+        <ScrollView>
+
+            <StackLayout Spacing="10" x:Name="layout" Padding="10">
+                <Image Source="xamarin_logo.png"  
+                       VerticalOptions="Start"
+                       HorizontalOptions="FillAndExpand"
+                       HeightRequest="320" />
+
+                <!--<Label Text="Text:" FontSize="Large" />-->
+                <Label Text="{Binding EventPlan.title}" FontSize="Large"/>
+                <!--<Label Text="Description:" FontSize="Medium" />-->
+                <Label Text="{Binding EventPlan.description}" FontSize="Medium"/>
+
+                <BoxView Color="Yellow" 
+                     VerticalOptions="FillAndExpand"
+                     HorizontalOptions="FillAndExpand" />
+
+                <BoxView Color="Green" 
+                     VerticalOptions="FillAndExpand"
+                     HorizontalOptions="FillAndExpand" />
+
+                <BoxView HeightRequest="75"
+                     Color="Blue" 
+                     VerticalOptions="End"
+                     HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
